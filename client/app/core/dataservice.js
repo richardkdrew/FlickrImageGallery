@@ -3,25 +3,22 @@
 
   angular
     .module('app.core')
-    .factory('dataservice', dataservice);
+    .factory('dataService', dataService);
 
-  dataservice.$inject = ['$http', '$q'];
+  dataService.$inject = ['$http', '$q'];
 
-  function dataservice($http, $q){
+  function dataService($http, $q){
+
+    /*function getGalleries() {
+      return 2;
+    }*/
 
     var apiUrl = 'https://api.flickr.com/services/rest';
     var apiKey = '36862b3eb779f31ad749a8b561b730b6';
     //var perPage = 12;
 
-    var service = {
-      getGalleriesData: getGalleries
-    };
-
-    return service;
-
     function getGalleries() {
       var deferred = $q.defer();
-
       $http.get(apiUrl, {
         params: {
           method: 'flickr.photosets.getList',
@@ -30,7 +27,7 @@
           format: 'json',
           nojsoncallback: '1',
           //per_page: perPage,
-          primary_photo_extras: 'url_s, url_q, url_t, url_m, url_c, url_b, url_o'
+          primary_photo_extras: 'url_sq, url_s, url_m, url_l'
         }
       })
         .success(getGalleriesComplete)
@@ -47,5 +44,11 @@
 
       return deferred.promise;
     }
+
+    var service = {
+      getGalleries: getGalleries
+    };
+
+    return service;
   }
 })();

@@ -15,12 +15,14 @@ module.exports = function(config) {
       'client/bower_components/angular-route/angular-route.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       'client/bower_components/lodash/dist/lodash.compat.js',
-      'client/app/app.module.js',
       'client/app/**/*.module.js',
       'client/app/**/*.js',
+      //'client/app/core/dataService.js',
       'client/app/**/*.html',
       'client/components/**/*.js',
       'client/components/**/*.html',
+
+      'client//test/mockData.js',
 
       // all specs ... comment out during early test training
       'client/test/**/*.spec.js'
