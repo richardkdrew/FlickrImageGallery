@@ -15,26 +15,26 @@
 
     var apiUrl = 'https://api.flickr.com/services/rest';
     var apiKey = '36862b3eb779f31ad749a8b561b730b6';
-    //var perPage = 12;
+	var galleriesMethod = 'flickr.photosets.getList';
+	var userId = '19632847@N00';
 
     function getGalleries() {
       var deferred = $q.defer();
       $http.get(apiUrl, {
         params: {
-          method: 'flickr.photosets.getList',
+          method: galleriesMethod,
           api_key: apiKey,
-          user_id: '19632847@N00',
+          user_id: userId,
           format: 'json',
           nojsoncallback: '1',
-          //per_page: perPage,
-          primary_photo_extras: 'url_sq, url_s, url_m, url_l'
+          primary_photo_extras: 'url_sq, url_q, url_t, url_m, url_c, url_b, url_o'
         }
       })
         .success(getGalleriesComplete)
         .error(getGalleriesFailed);
 
       function getGalleriesComplete(data) {
-        deferred.resolve(data.photosets.photoset);
+        deferred.resolve(data);
       }
 
       function getGalleriesFailed(data, code) {
