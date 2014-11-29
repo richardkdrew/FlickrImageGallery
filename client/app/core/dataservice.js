@@ -34,6 +34,7 @@
         .error(getGalleriesFailed);
 
       function getGalleriesComplete(data) {
+	//console.log(data);
         deferred.resolve(data);
       }
 
