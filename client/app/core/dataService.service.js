@@ -5,36 +5,26 @@
     .module('app.core')
     .factory('dataService', dataService);
 
-  dataService.$inject = ['$http', '$q'];
+  dataService.$inject = ['$http', '$q', 'flickrApi'];
 
-  function dataService($http, $q){
-
-    /*function getGalleries() {
-      return 2;
-    }*/
-
-    var apiUrl = 'https://api.flickr.com/services/rest';
-    var apiKey = '36862b3eb779f31ad749a8b561b730b6';
-	var galleriesMethod = 'flickr.photosets.getList';
-	var userId = '19632847@N00';
+  function dataService($http, $q, flickrApi){
 
     function getGalleries() {
       var deferred = $q.defer();
-      $http.get(apiUrl, {
+      $http.get(flickrApi.url, {
         params: {
-          method: galleriesMethod,
-          api_key: apiKey,
-          user_id: userId,
+          method: flickrApi.galleriesMethod,
+          api_key: flickrApi.key,
+          user_id: flickrApi.userId,
           format: 'json',
           nojsoncallback: '1',
-          primary_photo_extras: 'url_sq, url_q, url_t, url_m, url_c, url_b, url_o'
+          primary_photo_extras: flickrApi.photoExtras
         }
       })
         .success(getGalleriesComplete)
         .error(getGalleriesFailed);
 
       function getGalleriesComplete(data) {
-	//console.log(data);
         deferred.resolve(data);
       }
 

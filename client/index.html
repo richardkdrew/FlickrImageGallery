@@ -18,6 +18,9 @@
     <!-- build:css({.tmp,client}) app/app.css -->
 
       <!-- injector:css -->
+      <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css">
+      <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.min.css">
+      <link rel="stylesheet" href="bower_components/angular/angular-csp.css">
       <!-- endinjector -->
     <!-- endbuild -->
   </head>
@@ -49,6 +52,7 @@
       <script src="bower_components/angular/angular.js"></script>
       <script src="bower_components/angular-route/angular-route.js"></script>
       <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+      <script src="bower_components/angular-toastr/dist/angular-toastr.js"></script>
       <!-- endbower -->
     <!-- endbuild -->
 
@@ -56,9 +60,12 @@
         <script src="app/app.module.js"></script>
           <!-- injector:js -->
           <script src="app/app.route.js"></script>
+          <script src="app/components/logger/logger.module.js"></script>
+          <script src="app/components/logger/logger.service.js"></script>
           <script src="app/core/config.js"></script>
+          <script src="app/core/constants.js"></script>
           <script src="app/core/core.module.js"></script>
-          <script src="app/core/dataService.js"></script>
+          <script src="app/core/dataService.service.js"></script>
           <!-- endinjector -->
         <!-- endbuild -->
 </body>
