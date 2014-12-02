@@ -6,10 +6,10 @@
     /*
      * Angular modules
      */
-    'ngRoute'//,
+    'ngRoute',
 	/*
      * Reusable cross-app components
      */
-   //'components.logger'
+   'components.logger'
   ]);
 })();

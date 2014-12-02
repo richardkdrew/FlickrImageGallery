@@ -1,5 +1,5 @@
 describe('factory: logger', function () {
-  /*var service;
+  var service;
 
   beforeEach(function () {
     module('components.logger');
@@ -11,5 +11,5 @@ describe('factory: logger', function () {
   it('should be defined', function ()
   {
     expect(service).toBeDefined();
-  });*/
+  });
 });

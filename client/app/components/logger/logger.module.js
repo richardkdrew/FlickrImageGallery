@@ -1,5 +1,5 @@
 (function() {
     'use strict';
 
-    angular.module('components.logger', []);
+    angular.module('components.logger', ['toastr']);
 })();

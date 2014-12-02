@@ -5,9 +5,9 @@
     .module('app.core')
     .factory('dataService', dataService);
 
-  dataService.$inject = ['$http', '$q', 'flickrApi'];
+  dataService.$inject = ['$http', '$q', '$log', 'flickrApi'];
 
-  function dataService($http, $q, flickrApi){
+  function dataService($http, $q, $log, flickrApi){
 
     function getGalleries() {
       var deferred = $q.defer();
@@ -25,11 +25,12 @@
         .error(getGalleriesFailed);
 
       function getGalleriesComplete(data) {
+		$log.info('getGalleriesComplete, data:' + data);
         deferred.resolve(data);
       }
 
       function getGalleriesFailed(data, code) {
-        //alert(code);
+        //$log('getGalleriesFailed, data:' + data + ' code:' + code);
         deferred.reject(data);
       }
 

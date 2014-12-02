@@ -15,7 +15,7 @@ module.exports = function(config) {
       'client/bower_components/angular-route/angular-route.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       'client/bower_components/lodash/dist/lodash.compat.js',
-      'client/bower_components/angular-toastr/angular-toastr.js',
+      'client/bower_components/angular-toastr/dist/angular-toastr.js',
       'client/app/**/*.module.js',
       'client/app/**/*.js',
       'client/app/**/*.html',
