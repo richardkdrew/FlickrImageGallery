@@ -9,6 +9,12 @@
 
   function dataService($http, $q, $log, flickrApi){
 
+    var service = {
+      getGalleries: getGalleries
+    };
+
+    return service;
+
     function getGalleries() {
       var deferred = $q.defer();
       $http.get(flickrApi.url, {
@@ -36,11 +42,5 @@
 
       return deferred.promise;
     }
-
-    var service = {
-      getGalleries: getGalleries
-    };
-
-    return service;
   }
 })();

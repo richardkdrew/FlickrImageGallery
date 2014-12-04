@@ -1,15 +1,16 @@
 (function() {
   'use strict';
 
-  angular.module('app', [
-    /*
-     * Application core modules
-     */
-    'app.core'
+  angular.module('app', ['ngRoute',
+      /*
+       * Application core modules
+       */
+      'app.core',
 
-    /*
-     * Feature areas
-     */
+      /*
+       * Feature areas
+       */
+      'app.galleries'
 
   ]);
 })();

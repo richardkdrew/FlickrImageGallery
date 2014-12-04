@@ -20,9 +20,9 @@ module.exports = function(config) {
       'client/app/**/*.module.js',
       'client/app/**/*.js',
       'client/app/**/*.html',
-      'client/components/**/*.module.js',
-      'client/components/**/*.js',
-      'client/components/**/*.html',
+      //'client/components/**/*.module.js',
+      //'client/components/**/*.js',
+      //'client/components/**/*.html',
 
       'client/test/lib/mockData.js',
 

@@ -1,0 +1,13 @@
+<div ng-controller="Galleries as vm">
+  <h1>{{vm.title}}</h1>
+  <div>
+    <ul>
+      <li ng-repeat='gallery in vm.galleries.photosets.photoset'>
+        <a href='#gallery/{{gallery.id}}'>
+          <img ng-src='{{gallery.primary_photo_extras.url_sq}}' alt='{{gallery.title._content}}' />
+        </a>
+      </li>
+    </ul>
+    <!--{{vm.galleries}}-->
+  </div>
+</div>

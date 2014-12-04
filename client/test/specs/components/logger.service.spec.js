@@ -9,7 +9,8 @@ describe('factory: logger', function () {
     mockLog = sinon.stub({
       error: function (message, data, title) {},
       info: function (message, data, title) {},
-      warn: function (message, data, title) {}
+      warn: function (message, data, title) {},
+      log: function () {}
     });
 
     module(function($provide) {
@@ -76,5 +77,16 @@ describe('factory: logger', function () {
     })
 
   })
+
+  /*describe('function: log', function () {
+
+    it('should call the $log.log function', function () {
+      spyOn(mockLog, 'log');
+      service.log();
+
+      expect(mockLog.log).toHaveBeenCalled();
+    })
+
+  })*/
 
 });
