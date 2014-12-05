@@ -19,12 +19,12 @@
       var deferred = $q.defer();
       $http.get(flickrApi.url, {
         params: {
-          method: flickrApi.galleriesMethod,
-          api_key: flickrApi.key,
-          user_id: flickrApi.userId,
-          format: 'json',
-          nojsoncallback: '1',
-          primary_photo_extras: flickrApi.photoExtras
+          method                : flickrApi.galleriesMethod,
+          api_key               : flickrApi.key,
+          user_id               : flickrApi.userId,
+          format                : 'json',
+          nojsoncallback        : '1',
+          primary_photo_extras  : flickrApi.photoExtras
         }
       })
         .success(getGalleriesComplete)

@@ -18,6 +18,8 @@ module.exports = function(config) {
       'client/bower_components/angular-toastr/dist/angular-toastr.js',
       'client/bower_components/sinonjs/sinon.js',
       'client/app/**/*.module.js',
+      'client/app/**/*.controller.js',
+      'client/app/**/*.service.js',
       'client/app/**/*.js',
       'client/app/**/*.html',
       //'client/components/**/*.module.js',

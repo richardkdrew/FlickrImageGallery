@@ -7,10 +7,10 @@ describe('factory: logger', function () {
 
   beforeEach(function () {
     mockLog = sinon.stub({
-      error: function (message, data, title) {},
-      info: function (message, data, title) {},
-      warn: function (message, data, title) {},
-      log: function () {}
+      error : function (message, data, title) {},
+      info  : function (message, data, title) {},
+      warn  : function (message, data, title) {},
+      log   : function () {}
     });
 
     module(function($provide) {
