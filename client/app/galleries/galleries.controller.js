@@ -5,9 +5,9 @@
     .module('app.galleries')
     .controller('Galleries', Galleries);
 
-      Galleries.$inject = ['dataService', 'logger'];
+      Galleries.$inject = ['dataService'];//, 'logger'];
 
-      function Galleries(dataService, logger){
+      function Galleries(dataService) {//, logger){
         /* jshint validthis: true */
         var vm = this;
         vm.galleries = [];
@@ -17,7 +17,7 @@
 
         function initialise() {
           return getGalleries().then(function() {
-            logger.log('Initialised Galleries View');
+            //logger.log('Initialised Galleries View');
           })
         }
 
