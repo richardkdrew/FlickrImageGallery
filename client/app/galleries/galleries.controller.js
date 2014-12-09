@@ -7,7 +7,7 @@
 
       Galleries.$inject = ['dataService', 'logger'];
 
-      function Galleries(dataService, logger){
+      function Galleries(dataService, logger) {
         /* jshint validthis: true */
         var vm = this;
         vm.galleries = [];
