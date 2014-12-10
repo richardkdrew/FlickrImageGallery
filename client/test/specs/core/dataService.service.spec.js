@@ -31,7 +31,6 @@ describe('factory: dataService', function () {
     it('should be defined', function ()
     {
       expect(service.getGalleries()).toBeDefined();
-	    expect(service.getGalleries()).toNotEqual(null);
     });
 
     it('should return a promise', function () {

@@ -1,7 +1,7 @@
 'use strict';
 
 describe('controller: galleries', function () {
-  var controller, mockDataService = {}, scope, mockLogger = {};
+  var controller, mockGalleriesService = {}, scope, mockLogger = {};
 
   beforeEach(function () {
     module('app.galleries');
@@ -18,11 +18,11 @@ describe('controller: galleries', function () {
       });
 
       // Set up the mocked data service
-      mockDataService = {
+      mockGalleriesService = {
         getGalleries: function () {}
       };
 
-      sinon.stub(mockDataService, 'getGalleries', function() {
+      sinon.stub(mockGalleriesService, 'getGalleries', function() {
         var deferred = $q.defer();
         deferred.resolve(mockData.getMockGalleries());
         return deferred.promise;
@@ -30,7 +30,7 @@ describe('controller: galleries', function () {
 
       // Set up the controller under test
       controller = $controller('Galleries', { $scope: scope,
-        dataService: mockDataService,
+        galleriesService: mockGalleriesService,
         logger: mockLogger
       });
       $rootScope.$apply();
@@ -53,12 +53,11 @@ describe('controller: galleries', function () {
     });
 
     it('should have called the logger:info method', function () {
-
       expect(mockLogger.info.called).toBeTruthy();
     });
 
-    it('should have called the dataService:getGalleries method', function () {
-      expect(mockDataService.getGalleries.called).toBeTruthy();
+    it('should have called the galleriesService:getGalleries method', function () {
+      expect(mockGalleriesService.getGalleries.called).toBeTruthy();
     });
 
   });

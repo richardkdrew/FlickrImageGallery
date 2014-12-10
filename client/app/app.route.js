@@ -10,12 +10,12 @@
       .when('/galleries', {
         templateUrl: 'app/galleries/galleries.html',
         controller: 'Galleries',
-        controllerAs: 'vm',
-        resolve: {
-          galleries : function(dataService) {
-            return dataService.getGalleries();
+        controllerAs: 'vm'//,
+        /*resolve: {
+          galleries : function(galleriesService) {
+            return galleriesService.getGalleries();
           }
-        }
+        }*/
       }).otherwise({redirectTo: '/galleries'});
   }
 })();

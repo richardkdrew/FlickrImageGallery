@@ -5,27 +5,27 @@
     .module('app.galleries')
     .controller('Galleries', Galleries);
 
-      Galleries.$inject = ['dataService', 'logger'];
+  Galleries.$inject = ['galleriesService', 'logger'];
 
-      function Galleries(dataService, logger) {
-        /* jshint validthis: true */
-        var vm = this;
-        vm.galleries = [];
-        vm.title = 'Galleries';
+  function Galleries(galleriesService, logger) {
+    /* jshint validthis: true */
+    var vm = this;
+    vm.galleries = [];
+    vm.title = 'Galleries';
 
-        initialise();
+    initialise();
 
-        function initialise() {
-          return getGalleries().then(function() {
-            logger.info('Initialised Galleries View');
-          })
-        }
+    function initialise() {
+      return getGalleries().then(function() {
+        logger.info('Initialised Galleries View');
+      })
+    }
 
-        function getGalleries() {
-          return dataService.getGalleries().then(function (data) {
-              vm.galleries = data;
-              return vm.galleries;
-            })
-        }
-      }
+    function getGalleries() {
+      return galleriesService.getGalleries().then(function (data) {
+          vm.galleries = data;
+          return vm.galleries;
+        })
+    }
+  }
 })();
