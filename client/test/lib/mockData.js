@@ -1,11 +1,11 @@
 var mockData = (function() {
   return {
-    getMockGalleries  : getMockGalleries,
-    getMockGallery    : getMockGallery,
-    mockGalleryId     : '72157628060674071'
+    getMockGalleries          : getMockGalleries,
+    getMockGalleryPictures    : getMockGalleryPictures,
+    mockGalleryId             : '72157628060674071'
    };
 
-  function getMockGallery() {
+  function getMockGalleryPictures() {
     return {
       "photoset": {
         "id": "72157602123014497",

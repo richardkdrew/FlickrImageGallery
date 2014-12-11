@@ -25,7 +25,7 @@ describe('controller: galleries', function () {
 
       sinon.stub(mockDataService, 'getGalleryPictures', function() {
         var deferred = $q.defer();
-        deferred.resolve(mockData.getMockGallery());
+        deferred.resolve(mockData.getMockGalleryPictures());
         return deferred.promise;
       });
 

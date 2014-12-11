@@ -12,7 +12,6 @@
     var vm = this;
     vm.gallery = null;
     vm.title = 'Gallery Detail';
-    vm.getGallery = getGallery;
 
     initialise();
 
@@ -24,7 +23,6 @@
     }
 
     function getGallery(galleryId) {
-      //'72157628060674071'
       return dataService.getGalleryPictures(galleryId).then(function (data) {
         vm.gallery = data;
         //vm.title = vm.gallery.title;

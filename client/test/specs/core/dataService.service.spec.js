@@ -74,7 +74,7 @@ describe('factory: dataService', function () {
 
       //'https://api.flickr.com/services/rest?api_key=36862b3eb779f31ad749a8b561b730b6&extras=url_sq,+url_q,+url_t,+url_m,+url_c,+url_b,+url_o&format=json&method=flickr.photosets.getPhotos&nojsoncallback=1&photoset_id=72157628060674071'
       $httpBackend.whenGET(flickrApi.url + '?api_key=' + flickrApi.key + '&extras=' + flickrApi.photoExtras.split(' ').join('+') + '&format=json&method=' + flickrApi.galleryPicturesMethod + '&nojsoncallback=1' +  '&photoset_id=' + mockGalleryId)
-        .respond(mockData.getMockGallery);
+        .respond(mockData.getMockGalleryPictures);
     }));
 
     it('should be defined', function ()

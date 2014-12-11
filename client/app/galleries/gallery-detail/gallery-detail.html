@@ -1,7 +1,7 @@
 <div ng-controller="GalleryDetail as vm">
-  <h1>{{vm.title}}</h1>
-  <div ng-repeat="picture in vm.gallery.pictures">
-    <img ng-src="{{ picture.url_sq }}" />
+  <h1>{{vm.gallery.photoset.title}}</h1>
+  <div ng-repeat="picture in vm.gallery.photoset.photo">
+    <img ng-src="{{ picture.url_q }}" />
   </div>
-  {{vm.gallery}}
+  <!--{{vm.gallery}}-->
 </div>
