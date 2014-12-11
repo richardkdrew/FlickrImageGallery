@@ -16,6 +16,11 @@
             return galleriesService.getGalleries();
           }
         }*/
+      })
+      .when('/gallery/:id', {
+        templateUrl: 'app/galleries/gallery-detail/gallery-detail.html',
+        controller: 'GalleryDetail',
+        controllerAs: 'vm'
       }).otherwise({redirectTo: '/galleries'});
   }
 })();

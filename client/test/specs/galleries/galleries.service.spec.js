@@ -41,8 +41,6 @@ describe('service: galleriesService', function () {
       });
 
       expect(service.getGalleries().then).toBeDefined();
-      // TODO check this expect in more detail
-      expect(service.getGalleries().catch).toBeDefined();
     });
 
     it('should call the dataService:getGalleries function', inject(function ($rootScope) {
