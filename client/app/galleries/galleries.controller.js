@@ -3,7 +3,8 @@
 
   angular
     .module('app.galleries')
-    .controller('Galleries', Galleries);
+    .controller('Galleries', Galleries)
+    .animation('.pageSlide-animation', GalleriesAnimation);
 
   Galleries.$inject = ['galleriesService', 'logger'];
 
@@ -28,4 +29,26 @@
         })
     }
   }
+
+  function GalleriesAnimation() {
+    return {
+      addClass: function (element, className, done) {
+        if (className == 'ng-hide') {
+          // ANIMATION CODE GOES HERE
+        }
+        else {
+          done();
+        }
+      },
+      removeClass: function (element, className, done) {
+        if (className == 'ng-hide') {
+          // ANIMATION CODE GOES HERE
+        }
+        else {
+          done();
+        }
+      }
+    };
+  }
+
 })();

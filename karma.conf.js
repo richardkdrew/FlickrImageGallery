@@ -13,6 +13,7 @@ module.exports = function(config) {
     files: [
       'client/bower_components/angular/angular.js',
       'client/bower_components/angular-route/angular-route.js',
+      'client/bower_components/angular-animate/angular-animate.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       'client/bower_components/lodash/dist/lodash.compat.js',
       'client/bower_components/angular-toastr/dist/angular-toastr.js',
