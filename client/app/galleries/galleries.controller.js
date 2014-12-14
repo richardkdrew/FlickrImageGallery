@@ -3,8 +3,7 @@
 
   angular
     .module('app.galleries')
-    .controller('Galleries', Galleries)
-    .animation('.pageSlide-animation', GalleriesAnimation);
+    .controller('Galleries', Galleries);
 
   Galleries.$inject = ['galleriesService', 'logger'];
 
