@@ -11,11 +11,12 @@
         templateUrl: 'app/galleries/galleries.html',
         controller: 'Galleries',
         controllerAs: 'vm'//,
-        /*resolve: {
-          galleries : function(galleriesService) {
+        //resolve: {
+        //  galleries : 'galleriesService'
+          /*galleries : function(galleriesService) {
             return galleriesService.getGalleries();
-          }
-        }*/
+          }*/
+        //}
       })
       .when('/gallery/:id', {
         templateUrl: 'app/galleries/gallery-detail/gallery-detail.html',

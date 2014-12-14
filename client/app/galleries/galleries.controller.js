@@ -30,25 +30,4 @@
     }
   }
 
-  function GalleriesAnimation() {
-    return {
-      addClass: function (element, className, done) {
-        if (className == 'ng-hide') {
-          // ANIMATION CODE GOES HERE
-        }
-        else {
-          done();
-        }
-      },
-      removeClass: function (element, className, done) {
-        if (className == 'ng-hide') {
-          // ANIMATION CODE GOES HERE
-        }
-        else {
-          done();
-        }
-      }
-    };
-  }
-
 })();
